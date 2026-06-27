@@ -18,6 +18,8 @@ const videoUrl =
 
 const auroraColorStops = ['#062f49', '#2bc7e8', '#f0b35a'];
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const profile = {
   name: '杨毓庭',
   role: '软件测试工程师',
@@ -65,22 +67,22 @@ const projects = [
 const aiwearDemos = [
   {
     title: '1. 登录与图片入口',
-    src: '/demo/aiwear-login.webp',
+    src: assetPath('/demo/aiwear-login.webp'),
     alt: 'AIWear 登录页与图片编辑入口演示',
   },
   {
     title: '2. 图片编辑模块',
-    src: '/demo/aiwear-editor.webp',
+    src: assetPath('/demo/aiwear-editor.webp'),
     alt: 'AIWear 图片编辑和换装生成页面演示',
   },
   {
     title: '3. 输入编辑提示词',
-    src: '/demo/aiwear-edit-prompt.webp',
+    src: assetPath('/demo/aiwear-edit-prompt.webp'),
     alt: 'AIWear 图片编辑提示词输入演示',
   },
   {
     title: '4. 查看处理结果',
-    src: '/demo/aiwear-edit-result.webp',
+    src: assetPath('/demo/aiwear-edit-result.webp'),
     alt: 'AIWear 图片编辑处理结果演示',
   },
 ];
@@ -351,7 +353,7 @@ function Contact() {
     <section id="contact" className="contact-section">
       <img
         className="contact-image"
-        src="/contact-release-garden.webp"
+        src={assetPath('/contact-release-garden.webp')}
         alt=""
         aria-hidden="true"
         loading="lazy"
@@ -580,7 +582,7 @@ function App() {
       easing="ease-out"
     >
       <PillNav
-        logo="/logo.svg"
+        logo={assetPath('/logo.svg')}
         logoAlt="Yuting"
         items={navItems}
         activeHref={activeSection}
