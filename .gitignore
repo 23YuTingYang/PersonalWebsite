@@ -1,0 +1,5 @@
+node_modules/
+dist/
+render-*.png
+design-qa-assets/
+design-qa.md
